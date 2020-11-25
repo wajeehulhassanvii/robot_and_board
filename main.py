@@ -1,3 +1,8 @@
+"""
+Author: Wajeeh Ul Hassan
+Email: wajeehulhassan_vii@hotmail.com
+Contact number: 0411-773-990
+"""
 from models.position import Position
 from models.board import Board
 from models.robot import Robot
@@ -24,6 +29,7 @@ MOVE
 LEFT
 MOVE
 REPORT"""
+
 COMMAND_LIST = COMMAND_LIST.split("\n")
 
 if __name__ == "__main__":
