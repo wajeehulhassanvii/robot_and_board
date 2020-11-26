@@ -7,6 +7,10 @@ from models.position import Position
 
 class TestBoard(TestCase):
 
+    def setUp(self):
+        """load common test data"""
+        pass
+
     def test_board_initialization(self):
         """Test the initialization of the board"""
         board = Board()
