@@ -3,6 +3,8 @@ Author: Wajeeh Ul Hassan
 Email: wajeehulhassan_vii@hotmail.com
 Contact number: 0411-773-990
 """
+from pathlib import Path
+
 from models.position import Position
 from models.board import Board
 from models.robot import Robot
@@ -17,20 +19,12 @@ from models.robot import Robot
 """
 
 
-COMMAND_LIST = """PLACE 0 0 NORTH
-MOVE
-REPORT
-PLACE 0 0 NORTH
-LEFT
-REPORT
-PLACE 1 2 EAST
-MOVE
-MOVE
-LEFT
-MOVE
-REPORT"""
+def read_command_file(filepath):
+    return Path(filepath).read_text()
 
-COMMAND_LIST = COMMAND_LIST.split("\n")
+
+command_filepath = "command_list.txt"
+COMMAND_LIST = read_command_file(command_filepath).split("\n")
 
 if __name__ == "__main__":
     initial_position = Position(0, 0)
@@ -43,4 +37,3 @@ if __name__ == "__main__":
 
     for command in COMMAND_LIST:
         robot.execute_line_command(command)
-
