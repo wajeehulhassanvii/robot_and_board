@@ -1,5 +1,5 @@
 class Position:
-    def __init__(self, x=1, y=1):
+    def __init__(self, x=0, y=0):
         """Initialize Position object."""
         if x < 0:
             self.x = 0

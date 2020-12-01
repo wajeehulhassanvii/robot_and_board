@@ -16,18 +16,19 @@ class Board:
     # def move_available(self, position):
     #     """ will be called before everytime "MOVE" command is received,
     #     if move available then return True"""
-    #     return True if self.MIN_N < position.x < self.MAX_N and self.MIN_M < position.y < self.MAX_M else False
+    #     return True if self.MIN_N < position.x < self.MAX_N and self.MIN_M < position.y < self.MAX_M else False # noqa
 
     def move_available_in_direction(self, position, direction):
-        """ will be called before everytime "MOVE" command is received,
-        if move available then return True"""
+        """ This function be called before everytime "MOVE" command is received,
+        if move available then return Trueself.
+        Robot will check if it the move is available in that direction."""
         available = False
         if direction == "NORTH":
-            available = position.y + 1 < self.MAX_M # 4 + 1 < 5
+            available = position.y + 1 < self.MAX_M  # 4 + 1 < 5
         if direction == "SOUTH":
-            available = position.y - 1 >= self.MIN_M # 0 - 1 >= 0 FALSE,,,,, 1 - 1 >= 0  TRUE
+            available = position.y - 1 >= self.MIN_M  # 0 - 1 >= 0 FALSE,,,,, 1 - 1 >= 0  TRUE  # noqa
         if direction == "EAST":
-            available = position.x + 1 < self.MAX_N # 4 + 1 < 5
+            available = position.x + 1 < self.MAX_N  # 4 + 1 < 5
         if direction == "WEST":
-            available = position.x - 1 >= self.MIN_N # 0 - 1 >= 0 FALSE,,,,, 1 - 1 >= 0  TRUE
+            available = position.x - 1 >= self.MIN_N  # 0 - 1 >= 0 FALSE,,,,, 1 - 1 >= 0  TRUE  # noqa
         return available

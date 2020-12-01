@@ -25,8 +25,8 @@ class TestPosition(TestCase):
     def test_empty_initialization(self):
         """Test that position is getting initialized with default values if the value has not been given"""
         position = Position()
-        self.assertEqual(position.x, 1)
-        self.assertEqual(position.y, 1)
+        self.assertEqual(position.x, 0)
+        self.assertEqual(position.y, 0)
 
 
 if __name__ == '__main__':

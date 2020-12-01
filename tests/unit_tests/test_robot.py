@@ -12,7 +12,7 @@ class TestRobot(TestCase):
         position = Position(2, 3)
         board = Board(5, 5)
         robot = Robot(position, "NORTH", board)
-        self.assertEqual(f"X: {position.x} Y: {position.y} Direction: NORTH", robot.report())
+        self.assertEqual(f"X: {position.x} Y: {position.y} Direction: NORTH", robot.report())  # noqa
 
     def test_turn_left(self):
         """Test different scenarios of turn left function"""
@@ -71,7 +71,7 @@ class TestRobot(TestCase):
         self.assertEqual(robot.position.y, 3)
 
     def test_change_position(self):
-        """Test the change position function, when the robot has already been initialized"""
+        """Test the change position function, when the robot has already been initialized"""  # noqa
         new_position = Position(2, 2)
         position = Position(4, 4)
         board = Board(5, 5)
@@ -81,7 +81,7 @@ class TestRobot(TestCase):
         self.assertEqual(robot.direction, "WEST")
 
     def test_execute_line_command(self):
-        """Test execute line command, test whether the robot acts according to the command given."""
+        """Test execute line command, test whether the robot acts according to the command given."""  # noqa
         position = Position(4, 4)
         board = Board(5, 5)
         robot = Robot(position, "EAST", board)

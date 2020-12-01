@@ -12,7 +12,6 @@ class Robot:
 
 
     """
-
     # clockwise direction / turning right
     # anti-clockwise / turning left
     directions_to_direction_string = {
@@ -40,7 +39,7 @@ class Robot:
         return f"X: {self.position.x} Y: {self.position.y} Direction: {self.direction}"
 
     def turn_left(self):
-        """Change direction by turning left."""
+        """Turn towards the left direction."""
         direction = self.direction
         direction_string = self.directions_to_direction_string[direction]
         direction_string = direction_string[1:4] + direction_string[0]
@@ -48,7 +47,7 @@ class Robot:
         return self.direction
 
     def turn_right(self):
-        """Change direction by turning right."""
+        """Turn towards the right direction."""
         direction = self.direction
         direction_string = self.directions_to_direction_string[direction]
         direction_string = direction_string[3] + direction_string[0:3]
